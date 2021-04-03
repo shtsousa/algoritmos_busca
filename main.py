@@ -1,4 +1,4 @@
-def linear_search(my_list, key):
+def linear_search(my_list, key): #Busca Sequêncial
     for i, item in enumerate(my_list):
         if key == item:
             return True, i
@@ -21,7 +21,7 @@ def linear_search(my_list, key):
 
 import random
 
-def binary_search(list_fun, key):
+def binary_search(list_fun, key): #Busca binária
     start = 0
     finish = len(list_fun) - 1
     while start < finish:
@@ -44,8 +44,7 @@ if __name__ == '__main__':
 
     if answer:
         #index +1 > cuz data sets in python start with index 0
-        print(f'{key_main} is present at position{index + 1}')
+        print(f'{key_main} is present at position')
         print(f'Index of key:{list_main.index(key_main)}')
     else:
-        print(f'{key_main} is not present in your data set{index}')
-
+        print(f'{key_main} is not present in your data set')
