@@ -5,40 +5,47 @@ def linear_search(my_list, key):
         return False, -1
 
 #main
-main_list = random.sample(range(1000), 100)
-    main_key = 999
-    print(f'Before {main_list}')
-    print(f'After {main_list}')
+    list_main = random.sample(range(1000), 100)
+    key_main = 152
+    print(f'Before {list_main}')
+    print(f'After {list_main}')
 
-    answer, index = linear_search(my_list=main_list, key=main_key)
+    answer, index = linear_search(my_list=list_main, key=key_main)
 
     if answer:
         #index +1 > cuz data sets in python start with index 0
-        print(f'{main_key} is present at position{index+1}')
-        print(f'Index of key:{main_list.index(main_key+1)}')
+        print(f'{key_main} is present at position{index + 1}')
+        print(f'Index of key:{list_main.index(key_main)}')
     else:
-        print(f'{main_key} is not present in your data set{index}')
+        print(f'{key_main} is not present in your data set{index}')
 
 import random
 
-def binary_search(fun_list, key):
+def binary_search(list_fun, key):
     start = 0
-    finish = len(fun_list) -1
+    finish = len(list_fun) - 1
     while start < finish:
         middle = (start+finish) //2
-        if key < fun_list[middle]:
+        if key < list_fun[middle]:
             finish = middle -1
-        elif key > fun_list:
+        elif key > list_fun[middle]:
             start = middle +1
-    pass
+        else:
+            return True
 
 if __name__ == '__main__':
 
-    main_key = 34
-    main_list = random.sample(range(1000),100)
+    key_main = 34
+    list_main = random.sample(range(1000), 100)
+    print(f'Before:{list_main}')
+    list_main.sort()
+    print(f'After:{list_main}')
+    answer = binary_search(key=key_main, list_fun=list_main)
 
-    binary_search(key=main_key, fun=main_list)
-
-
-
+    if answer:
+        #index +1 > cuz data sets in python start with index 0
+        print(f'{key_main} is present at position{index + 1}')
+        print(f'Index of key:{list_main.index(key_main)}')
+    else:
+        print(f'{key_main} is not present in your data set{index}')
 
