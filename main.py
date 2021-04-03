@@ -45,6 +45,6 @@ if __name__ == '__main__':
     if answer:
         #index +1 > cuz data sets in python start with index 0
         print(f'{key_main} is present at position')
-        print(f'Index of key:{list_main.index(key_main)}')
+        print(f'Index of key:{list_main.index(key_main)}') 
     else:
         print(f'{key_main} is not present in your data set')
