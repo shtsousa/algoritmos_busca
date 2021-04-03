@@ -3,11 +3,9 @@ def linear_search(my_list, key):
         if key == item:
             return True, i
         return False, -1
-import random
 
-if __name__ == '__main__':
-
-    main_list = random.sample(range(1000), 100)
+#main
+main_list = random.sample(range(1000), 100)
     main_key = 999
     print(f'Before {main_list}')
     print(f'After {main_list}')
@@ -21,5 +19,26 @@ if __name__ == '__main__':
     else:
         print(f'{main_key} is not present in your data set{index}')
 
-    #print(f'{main_key} {"is" if answer else "is not"}'
-         # f' present in your data set')
+import random
+
+def binary_search(fun_list, key):
+    start = 0
+    finish = len(fun_list) -1
+    while start < finish:
+        middle = (start+finish) //2
+        if key < fun_list[middle]:
+            finish = middle -1
+        elif key > fun_list:
+            start = middle +1
+    pass
+
+if __name__ == '__main__':
+
+    main_key = 34
+    main_list = random.sample(range(1000),100)
+
+    binary_search(key=main_key, fun=main_list)
+
+
+
+
