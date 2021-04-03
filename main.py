@@ -15,7 +15,9 @@ if __name__ == '__main__':
     answer, index = linear_search(my_list=main_list, key=main_key)
 
     if answer:
-        print(f'{main_key} is present at position{index}')
+        #index +1 > cuz data sets in python start with index 0
+        print(f'{main_key} is present at position{index+1}')
+        print(f'Index of key:{main_list.index(main_key+1)}')
     else:
         print(f'{main_key} is not present in your data set{index}')
 
